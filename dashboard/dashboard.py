@@ -131,22 +131,6 @@ if len(numeric_columns) > 1:
     else:
         st.write("Please select at least two columns for the pair plot.")
 
-# 3D Scatter plot
-if len(numeric_columns) > 2:
-    st.header("3D Scatter Plot")
-    x_column_3d = st.selectbox("Select X-axis", numeric_columns, key="3d_x")
-    y_column_3d = st.selectbox("Select Y-axis", numeric_columns, key="3d_y")
-    z_column_3d = st.selectbox("Select Z-axis", numeric_columns, key="3d_z")
-    color_column_3d = st.selectbox("Select color column (optional)", ["None"] + list(categorical_columns), key="3d_color")
-
-    if color_column_3d == "None":
-        fig = px.scatter_3d(df, x=x_column_3d, y=y_column_3d, z=z_column_3d, 
-                            title=f'3D Scatter Plot: {x_column_3d} vs {y_column_3d} vs {z_column_3d}')
-    else:
-        fig = px.scatter_3d(df, x=x_column_3d, y=y_column_3d, z=z_column_3d, color=color_column_3d,
-                            title=f'3D Scatter Plot: {x_column_3d} vs {y_column_3d} vs {z_column_3d}, colored by {color_column_3d}')
-    st.plotly_chart(fig)
-
 # Basic statistics
 st.header("Basic Statistics")
 st.write(df.describe())
