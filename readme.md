@@ -39,6 +39,7 @@ streamlit run dashboard/dashboard.py
 ```
 
 This will generate visualizations and statistical summaries based on the bike-sharing data.
+or you can visit the live demo [HERE](https://bikesharingrasya.streamlit.app/)
 
 ## Data Sources
 
