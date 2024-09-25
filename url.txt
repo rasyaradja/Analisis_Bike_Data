@@ -1,1 +1,1 @@
-https://bikesharingrasya.streamlit.app/S
+https://bikesharingrasya.streamlit.app/
